@@ -9,6 +9,8 @@
 
 
 ## Prerequisites
+* SVL Simulator - [Instructions here](https://www.svlsimulator.com/docs/installation-guide/installing-simulator/)
+
 
 ## Table of Contents
 1. [Abstract](#abstract)
