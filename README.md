@@ -3,7 +3,7 @@
 ## Team Members
 1. [Nitish Gupta](https://github.com/nitesh4146)
 2. [Kameron Ted Bielawski](https://github.com/kambielawski)
-3. [Xiangyu Chen](https://github.com/#)
+3. [Xiangyu Chen](https://github.com/xiangyu8)
 4. [Yiju Yang](https://github.com/YijuYang)
 5. [Saharsh Gupta](https://github.com/saharshgupta)
 
