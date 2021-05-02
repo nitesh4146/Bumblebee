@@ -10,7 +10,7 @@
 
 ## Prerequisites
 * SVL Simulator - [Instructions here](https://www.svlsimulator.com/docs/installation-guide/installing-simulator/)
-* Data Directory Structures - ./Bumblebee/maps/Map1/data1/
+* Data Directory Structures - `./Bumblebee/maps/Map1/data1/`
 
 
 ## Table of Contents
