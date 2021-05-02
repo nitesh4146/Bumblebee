@@ -33,6 +33,8 @@ def data_to_hdf5():
         None
     """
 
+    print("[info] Creaing new hdf5 files from map data...\n")
+
     print("Please make sure your data structure is as \n{}/maps/Map1/data[0,1,2...]/img".format(WORKING_DIR))
     if not os.path.exists(HDF5_DIR):
         os.makedirs(HDF5_DIR)
@@ -110,6 +112,7 @@ def data_to_hdf5():
 
 
 def data_from_hdf5():
+    print("[info] Loading data from saved hdf5...")
     for i, hf_name in enumerate(glob.glob(HDF5_DIR + "/*")):
         print(hf_name)
         # h5_filename = os.path.join(HDF5_DIR, "batch-{}.h5".format(i))
@@ -127,5 +130,11 @@ def dir_selector():
     DATA_DIR = filedialog.askdirectory(parent=root,initialdir="/",title='Please select your maps directory')
     print("DATA_DIR changed to", DATA_DIR)
 
-data_to_hdf5()
-# data_from_hdf5()
+try:
+    user_input = input("Press [c] to Create new HDF5 from data or \nPress [e] to Load from existing HDF5\n Your Selection (press enter): ")
+    if 'c' in user_input:
+        data_to_hdf5()
+    elif 'e' in user_input:
+        data_from_hdf5()
+except KeyboardInterrupt:
+    print("\n[info] Aborted by User")
