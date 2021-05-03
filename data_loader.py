@@ -1,18 +1,18 @@
 import os
+from preprocess import crop_scale, equalize_data
 import pandas as pd
 import glob
 import cv2
 import numpy as np
 import matplotlib.pyplot as plt
-from preprocess import preprocess
-import torch
+# import torch
 import h5py
 import tkinter as tk
 from tkinter import filedialog
 
 
 # Check GPU availability
-print("Available GPU", torch.cuda.get_device_name(0))
+# print("Available GPU", torch.cuda.get_device_name(0))
 
 # Set data directories
 WORKING_DIR = os.path.dirname(os.path.realpath(__file__))
@@ -20,6 +20,8 @@ DATA_DIR = WORKING_DIR + "/maps"
 DATA_CSV = "training_data.csv"
 DATA_IMG = "img"
 HDF5_DIR = WORKING_DIR + "/hdf5"
+MODEL_DIR = os.path.join(WORKING_DIR, "my_models")
+
 CAMERA_LIST = ["center", "right", "left"]
 BATCH_SIZE = 2500
 
@@ -45,7 +47,7 @@ def data_to_hdf5():
     if not all_maps:
         print("Maps not found")
         exit(0)
-    elif "Map1" not in all_maps[0]:
+    elif "Map" not in all_maps[0]:
         print("Incorrect directory structure")
         exit(0)
 
@@ -59,13 +61,15 @@ def data_to_hdf5():
     # Sample test
     sample_img_path = glob.glob(DATA_DIR + "/**/*.jpg", recursive=True)[0]
     img = cv2.imread(sample_img_path)
-    plt.imshow(preprocess(img), cmap="gray")
-    plt.show()
+    # cv2.imwrite(WORKING_DIR, img)
+    # plt.imshow(crop_scale(img), cmap="gray")
+    # plt.show()
 
     batch = 0 
     batch_idx = 0
 
     for data in maps_data[0]:                               # Iterate over each map
+        print(data)
         csv_df = pd.read_csv(data + "/" + DATA_CSV, header=None)
 
         for index, row in csv_df.iterrows():                # Iterate over data for each map
@@ -78,7 +82,7 @@ def data_to_hdf5():
                 img_path = data + "/" + DATA_IMG + "/" + \
                     CAMERA_LIST[i] + "-" + img_time + ".jpg"
                 img = cv2.imread(img_path)
-                img_processed = preprocess(img)
+                img_processed = crop_scale(img)
 
                 images.append(img_processed)
                 labels.append(float(steer) + correction[i])
@@ -111,16 +115,14 @@ def data_to_hdf5():
         batch_idx += 1
 
 
-def data_from_hdf5():
+def data_from_hdf5(filename):
     print("[info] Loading data from saved hdf5...")
-    for i, hf_name in enumerate(glob.glob(HDF5_DIR + "/*")):
-        print(hf_name)
-        # h5_filename = os.path.join(HDF5_DIR, "batch-{}.h5".format(i))
-        with h5py.File(hf_name, 'r') as hfile:
-            n1 = np.array(hfile.get('images'))
-            n2 = np.array(hfile.get('labels'))
-            print(n1.shape)
-            print(n2.shape)
+
+    with h5py.File(filename, 'r') as hfile:
+        images = np.array(hfile.get('images'))
+        labels = np.array(hfile.get('labels'))
+    
+    return images, labels
 
 
 def dir_selector():
@@ -129,12 +131,3 @@ def dir_selector():
 
     DATA_DIR = filedialog.askdirectory(parent=root,initialdir="/",title='Please select your maps directory')
     print("DATA_DIR changed to", DATA_DIR)
-
-try:
-    user_input = input("Press [c] to Create new HDF5 from data or \nPress [e] to Load from existing HDF5\n Your Selection (press enter): ")
-    if 'c' in user_input:
-        data_to_hdf5()
-    elif 'e' in user_input:
-        data_from_hdf5()
-except KeyboardInterrupt:
-    print("\n[info] Aborted by User")
