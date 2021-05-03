@@ -5,14 +5,9 @@ import glob
 import cv2
 import numpy as np
 import matplotlib.pyplot as plt
-# import torch
 import h5py
 import tkinter as tk
 from tkinter import filedialog
-
-
-# Check GPU availability
-# print("Available GPU", torch.cuda.get_device_name(0))
 
 # Set data directories
 WORKING_DIR = os.path.dirname(os.path.realpath(__file__))
@@ -69,7 +64,7 @@ def data_to_hdf5():
     batch_idx = 0
 
     for data in maps_data[0]:                               # Iterate over each map
-        print(data)
+        print("\n[info] Processing: ", data.split("/")[-2:])
         csv_df = pd.read_csv(data + "/" + DATA_CSV, header=None)
 
         for index, row in csv_df.iterrows():                # Iterate over data for each map
