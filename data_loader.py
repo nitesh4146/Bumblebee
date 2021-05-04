@@ -15,7 +15,7 @@ DATA_DIR = WORKING_DIR + "/maps"
 DATA_CSV = "training_data.csv"
 DATA_IMG = "img"
 HDF5_DIR = WORKING_DIR + "/hdf5"
-MODEL_DIR = os.path.join(WORKING_DIR, "my_models")
+MODEL_DIR = os.path.join(WORKING_DIR, "model")
 
 CAMERA_LIST = ["center", "right", "left"]
 BATCH_SIZE = 2500
@@ -90,8 +90,10 @@ def data_to_hdf5():
                 if batch % BATCH_SIZE == 0:
                     h5_filename = os.path.join(HDF5_DIR, "batch-{}.h5".format(batch_idx))
                     with h5py.File(h5_filename, 'w') as hfile:
-                        hfile.create_dataset('images', data=images)
-                        hfile.create_dataset('labels', data=labels)
+                        images_eq, labels_eq = equalize_data(images, labels)
+
+                        hfile.create_dataset('images', data=images_eq)
+                        hfile.create_dataset('labels', data=labels_eq)
 
                         print("Batch {} saved".format(batch_idx))
                         images = []
@@ -101,6 +103,8 @@ def data_to_hdf5():
     # Save the remaining data 
     h5_filename = os.path.join(HDF5_DIR, "batch-{}.h5".format(batch_idx))
     with h5py.File(h5_filename, 'w') as hfile:
+        images_eq, labels_eq = equalize_data(images, labels)
+
         hfile.create_dataset('images', data=images)
         hfile.create_dataset('labels', data=labels)
 
