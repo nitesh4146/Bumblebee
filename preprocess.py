@@ -1,3 +1,4 @@
+from keras.applications.vgg16 import preprocess_input
 import pandas as pd
 import cv2 
 import numpy as np
@@ -13,6 +14,9 @@ def crop_scale(img):
     
     processed_img = img[sky_crop:hood_crop, left_crop:right_crop, :]
     processed_img = rescale(processed_img)
+
+    # cv2.imshow("processed_img", processed_img)
+    # cv2.waitKey()
 
     return processed_img
 
@@ -71,3 +75,6 @@ def plot_hist(labels, nbin=25):
     plt.show()
 
     return hist, bins
+
+
+# crop_scale(cv2.imread("/home/slickmind/lanefollowing/ros2_ws/src/lane_following/bumblebee/maps/center-2021-05-05T19:45:42.285457.jpg"))

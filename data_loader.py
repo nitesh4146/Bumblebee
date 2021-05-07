@@ -105,22 +105,22 @@ def data_to_hdf5():
     with h5py.File(h5_filename, 'w') as hfile:
         images_eq, labels_eq = equalize_data(images, labels)
 
-        hfile.create_dataset('images', data=images)
-        hfile.create_dataset('labels', data=labels)
+        hfile.create_dataset('images', data=images_eq)
+        hfile.create_dataset('labels', data=labels_eq)
 
         print("Batch {} saved".format(batch_idx))
         images = []
         labels = []
-        batch_idx += 1
 
 
 def data_from_hdf5(filename):
-    print("[info] Loading data from saved hdf5...")
+    # print("[info] Loading data from saved hdf5...")
 
     with h5py.File(filename, 'r') as hfile:
         images = np.array(hfile.get('images'))
         labels = np.array(hfile.get('labels'))
     
+    # print(images.shape)
     return images, labels
 
 
