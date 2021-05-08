@@ -13,8 +13,8 @@ def crop_scale(img):
     
     processed_img = img[sky_crop:hood_crop, left_crop:right_crop, :]
 
-    processed_img = rescale(processed_img)
-    # processed_img = cv2.resize(processed_img, (200,66))
+    # processed_img = rescale(processed_img)
+    processed_img = cv2.resize(processed_img, (200,66))
 
     # print(processed_img.shape)
     # cv2.imshow("processed_img", processed_img)
