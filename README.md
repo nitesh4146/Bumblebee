@@ -16,6 +16,9 @@
 
 ### Abstract
 ### Implementation
+#### 1) End-to-end architecture
+<img src = "images/framework.png">
+
 ### Evaluation
 * **Results**:
 <img src = "images/result.png">
