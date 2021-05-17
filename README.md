@@ -18,7 +18,7 @@
 ### Implementation
 #### 1) End-to-end architecture
 <p align="center">
-<img src = "images/framework.png"  alt="alt text" width=700" height="450">
+<img src = "images/framework.png"  alt="alt text" width=700" height="400">
 </p>
                                                                          
 #### 2) Data Acquisition
