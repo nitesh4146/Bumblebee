@@ -17,7 +17,7 @@
 ### Abstract
 ### Implementation
 ### Evaluation
-* Results:
+* **Results:
 <img src = "images/result.png">
 
 ### Conclusion 
