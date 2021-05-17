@@ -80,7 +80,7 @@ To make networks adjusted to more complicated road conditions, we explored more 
 ### Conclusion 
 * RNN based backbone can finish all maps we tried, showing it's promising to consider long dependencies of sequence based tasks like steering estimation in autonomous driving.
 * There is a trade-off between the number of parameters and security in autonomous driving. However, once the inference time can meet the minimum requirement of online inference, we only need to consider security then.
-* Good feature extractors in typical tasks like image classification, cannot always work in steering estimation. Specially designed models are needed for such a time-sensitive and accuracy-sensitive task.
+* Good feature extractors in typical tasks like image classification, cannot always work in steering estimation. Specially designed models are needed for such a time-sensitive and accuracy-sensitive task, like our sliding window based RNN model.
 
 ### References 
 1. Bojarski, M.,Testa, D., Dworakowski, D., Firner, B., Flepp, B., Goyal, P., Jackel,
