@@ -18,7 +18,7 @@
 ### Implementation
 #### 1) End-to-end architecture
 <p align="center">
-<img src = "images/framework.png"  alt="alt text" width="600" height="400">
+<img src = "images/framework.png"  alt="alt text" width=7600" height="400">
 </p>
 #### 2) Data Acquisition
 * Map: 4 different maps: San Francisco, BorgesAve, Circular Path and Lan-less road
@@ -33,8 +33,9 @@
   * Cropping: removal irrelevant information (sky, hood, etc.)
   * Scaling: reducing resulution 
 * Batching: to make the algorithms run within limited memory.
-
-<img src = "images/batching.png"  alt="alt text" width="600" height="300"></center>
+<p align="center">
+<img src = "images/batching.png"  alt="alt text" width="600" height="300">
+ </p>
 
 #### 3) Training 
 * setting:
