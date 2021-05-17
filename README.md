@@ -22,7 +22,7 @@
 </p>
                                                                          
 #### 2) Data Acquisition
-* Map: 4 different maps: San Francisco, BorgesAve, Circular Path and Lan-less road
+* Maps: 4 different maps: San Francisco, BorgesAve, Circular Path and Lan-less road
 * Data: a. Camera feeds (left/right/center), b. corresponding steering angle values.
 * Drive Speed: constant speed
 * Time: 10+ hours of driving
@@ -78,6 +78,10 @@ To make networks adjusted to more complicated road conditions, we explored more 
   * Comparison of different backbones driving on San Francisco map. [video](https://www.youtube.com/watch?v=MhFzb6Eb2CQ)
  
 ### Conclusion 
+* RNN based backbone can finish all maps we tried, showing it's promising to consider long dependencies of sequence based tasks like steering estimation in autonomous driving.
+* There is a trade-off between the number of parameters and security in autonomous driving. However, once the inference time can meet the minimum requirement of online inference, we only need to consider security then.
+* Good feature extractors in typical tasks like image classification, cannot always work in steering estimation. Specially designed models are needed for such a time-sensitive and accuracy-sensitive task.
+
 ### References 
 1. Bojarski, M.,Testa, D., Dworakowski, D., Firner, B., Flepp, B., Goyal, P., Jackel,
 L., Monfort, M., Muller, U., Zhang, J., Zhang, X., Zhao, J., & Zieba, K. (2016). End to End Learning for Self-Driving Cars. ArXiv, abs/1604.07316.
