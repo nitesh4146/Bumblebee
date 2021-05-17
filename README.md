@@ -45,11 +45,14 @@ End-to-end learning for self-driving cars shows great potential since it removes
 <img src = "images/balancing.png"  alt="alt text" width=1000" height="300">
 </p>
   * Cropping: removal irrelevant information (sky, hood, etc.)
+                                                                          
 <p align="center">
 <img src = "images/cropping.png"  alt="alt text" width=1000" height="300">
 </p>
-  * Scaling: reducing resulution 
+
+* Scaling: reducing resolution 
 * Batching: to make the algorithms run within limited memory.
+
 <p align="center">
 <img src = "images/batchingv2.png"  alt="alt text" width="500" height="350">
  </p>
