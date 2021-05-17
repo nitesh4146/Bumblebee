@@ -41,7 +41,13 @@ End-to-end learning for self-driving cars shows great potential since it removes
 * Data Augmentation
   * Data addition: flipping images and negating corresponding steering angles.
   * Histogram balanceing: randomly resampling to the mean to remove bias as below.
+<p align="center">
+<img src = "images/balancing.png"  alt="alt text" width=700" height="400">
+</p>
   * Cropping: removal irrelevant information (sky, hood, etc.)
+<p align="center">
+<img src = "images/cropping.png"  alt="alt text" width=700" height="400">
+</p>
   * Scaling: reducing resulution 
 * Batching: to make the algorithms run within limited memory.
 <p align="center">
