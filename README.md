@@ -27,7 +27,7 @@ End-to-end learning for self-driving cars shows great potential since it removes
 ### Implementation
 #### 1) End-to-end architecture
 <p align="center">
-<img src = "images/framework.png"  alt="alt text" width=700" height="400">
+<img src = "images/archeture.png"  alt="alt text" width=700" height="400">
 </p>
                                                                          
 #### 2) Data Acquisition
@@ -45,7 +45,7 @@ End-to-end learning for self-driving cars shows great potential since it removes
   * Scaling: reducing resulution 
 * Batching: to make the algorithms run within limited memory.
 <p align="center">
-<img src = "images/batching.png"  alt="alt text" width="500" height="350">
+<img src = "images/batchingv2.png"  alt="alt text" width="500" height="350">
  </p>
 
 #### 4) Training 
