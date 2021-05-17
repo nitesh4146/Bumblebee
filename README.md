@@ -18,7 +18,7 @@
 ### Implementation
 #### 1) End-to-end architecture
 <p align="center">
-<img src = "images/framework.png"  alt="alt text" width=700" height="500">
+<img src = "images/framework.png"  alt="alt text" width=700" height="450">
 </p>
                                                                          
 #### 2) Data Acquisition
@@ -36,7 +36,7 @@
   * Scaling: reducing resulution 
 * Batching: to make the algorithms run within limited memory.
 <p align="center">
-<img src = "images/batching.png"  alt="alt text" width="500" height="400">
+<img src = "images/batching.png"  alt="alt text" width="500" height="350">
  </p>
 
 #### 4) Training 
