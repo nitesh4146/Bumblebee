@@ -15,6 +15,8 @@
 
 
 ### Abstract
+End-to-end learning for self-driving cars shows great potential since it removes some modules like path planning and optimization compared with traditional sefl-driving cars. However, data collection and model testing have been a bottleneck for algorithm verification. Thankfully, a more realistic simulator, SVL, was released on March, 2021, allowing us explore end-to-end algorithms conveniently. To this end, we collect data, design and also test exsting models, then simulate on the SVL simulator to compare the performance of some steering estimation algorithms. 
+
 ### Implementation
 #### 1) End-to-end architecture
 <p align="center">
