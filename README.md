@@ -14,14 +14,14 @@
 5. [References](#references)
 
 
-### Abstract
-### Implementation
-### Evaluation
+### 1. Abstract
+### 2. Implementation
+### 3. Evaluation
 * **Results**:
 <img src = "images/result.png">
 
-### Conclusion 
-### References 
+### 4. Conclusion 
+### 5. References 
 1. Bojarski, M.,Testa, D., Dworakowski, D., Firner, B., Flepp, B., Goyal, P., Jackel,
 L., Monfort, M., Muller, U., Zhang, J., Zhang, X., Zhao, J., & Zieba, K. (2016). End to End Learning for Self-Driving Cars. ArXiv, abs/1604.07316.
 2. [SVL simulator](www.svlsimulator.com)
