@@ -44,6 +44,7 @@ End-to-end learning for self-driving cars shows great potential since it removes
 <p align="center">
 <img src = "images/balancing.png"  alt="alt text" width=1000" height="300">
 </p>
+                                                                          
   * Cropping: removal irrelevant information (sky, hood, etc.)
                                                                           
 <p align="center">
