@@ -17,7 +17,7 @@
 ### Abstract
 ### Implementation
 #### 1) End-to-end architecture
-<img src = "images/framework.png"  alt="alt text" width="800" height="400"></center>
+<img src = "images/framework.png"  alt="alt text" width="600" height="400"></center>
 
 #### 2) Data Acquisition
 * Map: 4 different maps: San Francisco, BorgesAve, Circular Path and Lan-less road
