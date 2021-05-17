@@ -18,7 +18,6 @@
 ### Implementation
 ### Evaluation
 * Results:
-<img src = "images/results.png">
 
 ### Conclusion 
 ### References 
