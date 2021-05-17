@@ -20,6 +20,7 @@
 <p align="center">
 <img src = "images/framework.png"  alt="alt text" width=700" height="400">
 </p>
+                                                                         
 #### 2) Data Acquisition
 * Map: 4 different maps: San Francisco, BorgesAve, Circular Path and Lan-less road
 * Data: a. Camera feeds (left/right/center), b. corresponding steering angle values.
