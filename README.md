@@ -33,7 +33,7 @@
   * Scaling: reducing resulution 
 * Batching: to make the algorithms run within limited memory.
 
-<img src = "images/batching.png"  alt="alt text" width="800" height="400"></center>
+<img src = "images/batching.png"  alt="alt text" width="600" height="300"></center>
 
 #### 3) Training 
 * setting:
