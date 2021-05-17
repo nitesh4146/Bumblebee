@@ -38,7 +38,7 @@
 <img src = "images/batching.png"  alt="alt text" width="500" height="300">
  </p>
 
-#### 3) Training 
+#### 4) Training 
 * setting:
   * backbone: convnet from NVIDIA, 5 conv layers+ 4 dense layers.
   * GPU: GTX 1080 8GB
@@ -56,7 +56,7 @@
   * FPS: 100 FPS
   * Successfully completed laps on all maps.
 
-#### 4) Network Exploration
+#### 5) Network Exploration
 To make networks adjusted to more complicated road conditions, we explored more backbones to compare (results can be found in next part.):
 * Baseline: convnet from NVIDIA (from previous part)
 * convnet v2: another version of convnet with more FC layers and less conv layer, thus more parameters.
