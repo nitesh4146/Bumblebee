@@ -17,7 +17,7 @@
 ### Abstract
 ### Implementation
 #### 1) End-to-end architecture
-<img src = "images/framework.png">
+<img src = "images/framework.png"  alt="alt text" width="100" height="80">
 
 ### Evaluation
 * **Results**:
