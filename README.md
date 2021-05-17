@@ -26,6 +26,7 @@
 * Data: a. Camera feeds (left/right/center), b. corresponding steering angle values.
 * Drive Speed: constant speed
 * Time: 10+ hours of driving
+* Data: to download our collected data, please refer to Prerequisites part above.
 
 #### 3) Data Preprocessing
 * Data Augmentation
