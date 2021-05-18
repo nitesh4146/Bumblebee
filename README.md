@@ -1,12 +1,5 @@
 # <center>Bumblebee <img src="images/bee.png" alt="alt text" width="48" height="48"></center>
 
-## Team Members & Contributors
-1. [Nitish Gupta](https://github.com/nitesh4146)
-2. [Kameron Ted Bielawski](https://github.com/kambielawski)
-3. [Xiangyu Chen](https://github.com/xiangyu8)
-4. [Yiju Yang](https://github.com/YijuYang)
-5. [Saharsh Gupta](https://github.com/saharshgupta)
-
 ## Prerequisites
 * SVL Simulator - [Instructions here](https://www.svlsimulator.com/docs/installation-guide/installing-simulator/)
 * Data Link - [Download from Drive](https://drive.google.com/file/d/1rL90epx_HgIjThv9ABoYMDS5SetPue1_/view?usp=sharing)  into maps folder
@@ -100,6 +93,9 @@ To make networks adjusted to more complicated road conditions, we explored more 
   * drive in different weather condition with convnet backbone. [video](https://www.youtube.com/watch?v=cOHSH2WEXE8)
   * Comparison of different backbones driving on Circular Path map. [video](https://www.youtube.com/watch?v=QknvHtCnNVk)
   * Comparison of different backbones driving on San Francisco map. [video](https://www.youtube.com/watch?v=MhFzb6Eb2CQ)
+
+<img src = "images/drive.gif"  alt="alt text" width=700" height="400">
+
  
 ### Conclusion 
 * RNN based backbone can finish all maps we tried, showing it's promising to consider long dependencies of sequence based tasks like steering estimation in autonomous driving.
