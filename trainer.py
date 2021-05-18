@@ -25,6 +25,7 @@ K.set_session(sess)
 
 # IMG_SIZE = (222, 780, 3)
 
+# Function to plot Epoch vs MSE
 def plot_history(all_history):
     plt.style.use('ggplot')
 
@@ -44,13 +45,14 @@ def plot_history(all_history):
     plt.savefig('mse.png')
     plt.show()  
 
+# Function to visualize feature maps
 def visualize_features(model, img):
     # keract_inputs = img[:1]
     # keract_targets = target_test[:1]
     activations = get_activations(model, img)
     display_activations(activations, cmap="gray", save=False)
 
-
+# Funtion to compile and fit model 
 def train_model(model, X_train, y_train, compile_flag=True, is_rnn=False):
     learning_rate = 1e-4
     epochs = 10
@@ -85,7 +87,7 @@ def train_model(model, X_train, y_train, compile_flag=True, is_rnn=False):
 
     return model, history_object
 
-
+# Function to save trained model
 def save_model(model):
     if not os.path.exists(MODEL_DIR):
         os.makedirs(MODEL_DIR)
@@ -93,34 +95,9 @@ def save_model(model):
     model.save(MODEL_DIR + '/model.h5')
     print("Model Saved!")
 
-
+# Function to load model
 def load_modelh5():
     return load_model(MODEL_DIR + '/model.h5')
-
-
-def rnn_predictor(rnn_history=1):
-    model = load_modelh5()
-
-    img_list = []
-    for img_name in glob.glob(WORKING_DIR + "/images/center*.jpg"):
-        img = cv2.imread(img_name)
-        img = crop_scale(img)
-        img_list.append(img)
-
-    # img = np.expand_dims(img, axis=0)  # img = img[np.newaxis, :, :]
-
-    print(np.array(img_list).reshape(-1, rnn_history, 66, 200, 3).shape)
-    img_list = np.array(img_list).reshape(-1, rnn_history, 66, 200, 3)
-    print(model.predict(img_list))
-    # steering = self.model.predict(img)
-
-
-def predictor():
-    img = cv2.imread(WORKING_DIR + "/images/center-2021-05-03T03:42:09.644815.jpg")
-    img = crop_scale(img)
-    img = np.expand_dims(img, axis=0)
-    model = load_modelh5()
-    print(model.predict(img))
 
 
 def main():
@@ -134,7 +111,8 @@ def main():
 
     model_select = input(
         "\nSelect your model:\n[0] NVIDIA\n[1] RNN\n[2] ResNet\n[3] VGG16\n\tYour selection: ")
-
+    
+    # Model selector
     if '0' in model_select:
         model = nvidia_model()
     elif '1' in model_select:
@@ -154,26 +132,28 @@ def main():
     loss_history_list = []
 
     try:
+        # Load Data, Preprocess and create batches for training
         if 'c' in mode:
             data_to_hdf5()
-
+        
+        # Training specific settings
         if 't' in mode:
             model.summary()
             plot_model(model, show_shapes=True, to_file=WORKING_DIR + "/images/model.png")
 
             start_time = time.time()
+            
+            # Iterate over batch files
             for batch, hfile in enumerate(glob.glob(HDF5_DIR + "/*.h5")):
                 print("\n\nCurrent Batch: {}/{}".format(batch,
                       len(glob.glob(HDF5_DIR + "/*.h5"))-1))
 
                 images, labels = data_from_hdf5(hfile)
-                # cv2.imshow(" ", images[0])
-                # cv2.waitKey()
 
                 X_train = X_train + list(images)
                 y_train = y_train + list(labels)
                 
-
+                # Customize the size of Training data irrespective of batch size using TRAINING_BATCH
                 if len(X_train) > TRAINING_BATCH:
                     loss_history = None
 
@@ -190,7 +170,8 @@ def main():
 
                     print("Batch Size:", np.array(
                         X_train).shape, np.array(y_train).shape)
-
+                    
+                    # Call training and fit function (For RNN the input data needs to be reshaped to account for sequence
                     if initial:
                         if IS_RNN:
                             model, loss_history = train_model(model, np.array(X_train).reshape(-1, RNN_HISTORY, 66, 200, 3), np.array(y_train).reshape(-1, RNN_HISTORY, 1), is_rnn=True)
