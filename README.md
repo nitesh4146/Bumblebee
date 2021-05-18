@@ -95,11 +95,8 @@ To make networks adjusted to more complicated road conditions, we explored more 
   * Comparison of different backbones driving on Circular Path map. [video](https://www.youtube.com/watch?v=QknvHtCnNVk)
   * Comparison of different backbones driving on San Francisco map. [video](https://www.youtube.com/watch?v=MhFzb6Eb2CQ)
 
-<p align="center">
 ![Drive Animation](/images/drive.gif)
-</p>
-                                                                     
-
+                                                               
  
 ### Conclusion 
 * RNN based backbone can finish all maps we tried, showing it's promising to consider long dependencies of sequence based tasks like steering estimation in autonomous driving.
