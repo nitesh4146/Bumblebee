@@ -1,5 +1,7 @@
 # <center>Bumblebee <img src="images/bee.png" alt="alt text" width="48" height="48"></center>
 
+[![Python Version](https://img.shields.io/badge/Python-3.7+-blue.svg)](https://www.python.org/) 
+
 ## Prerequisites
 * SVL Simulator - [Instructions here](https://www.svlsimulator.com/docs/installation-guide/installing-simulator/)
 * Data Link - [Download from Drive](https://drive.google.com/file/d/1rL90epx_HgIjThv9ABoYMDS5SetPue1_/view?usp=sharing)  into maps folder
