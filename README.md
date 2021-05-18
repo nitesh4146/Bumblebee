@@ -56,7 +56,7 @@ End-to-end learning for self-driving cars shows great potential since it removes
 
 <p align="center">
 <img src = "images/batchingv2.png"  alt="alt text" width="500" height="350">
- </p>
+</p>
 
 #### 4) Training 
 * setting:
@@ -75,6 +75,11 @@ End-to-end learning for self-driving cars shows great potential since it removes
   * inference time: 10 ms
   * FPS: 100 FPS
   * Successfully completed laps on all maps.
+
+* Feature map:
+<p align="center">
+<img src = "images/featuremap.png"  alt="alt text" width="1000" height="400">
+</p>
 
 #### 5) Network Exploration
 To make networks adjusted to more complicated road conditions, we explored more backbones to compare (results can be found in next part.):
