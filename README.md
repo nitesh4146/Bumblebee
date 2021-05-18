@@ -1,4 +1,4 @@
-# <center>Bumblebee <img src="images/bee.png" alt="alt text" width="48" height="48"></center> [![Python Version](https://img.shields.io/badge/Python-3.6+-blue.svg)](https://www.python.org/) 
+# <center>Bumblebee <img src="images/bee.png" alt="alt text" width="48" height="48"></center> [![Python Version](https://img.shields.io/badge/Python-3.6+-blue.svg)](https://www.python.org/)  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Prerequisites
 * SVL Simulator - [Instructions here](https://www.svlsimulator.com/docs/installation-guide/installing-simulator/)
