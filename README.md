@@ -112,3 +112,11 @@ L., Monfort, M., Muller, U., Zhang, J., Zhang, X., Zhao, J., & Zieba, K. (2016).
 5. Eraqi, H.M., Moustafa, M.N., & Honer, J. (2017). End-to-End Deep Learning for Steering Autonomous Vehicles Considering Temporal Dependencies. ArXiv, abs/1710.03804.
 6. Resnet is based on: https://github.com/raghakot/keras-resnet
 7. Shufflenet is based on: https://github.com/scheckmedia/keras-shufflenet
+
+
+### Team Members & Contributors
+1. [Nitish Gupta](https://github.com/nitesh4146)
+2. [Kameron Ted Bielawski](https://github.com/kambielawski)
+3. [Xiangyu Chen](https://github.com/xiangyu8)
+4. [Yiju Yang](https://github.com/YijuYang)
+5. [Saharsh Gupta](https://github.com/saharshgupta)
