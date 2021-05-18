@@ -94,7 +94,8 @@ To make networks adjusted to more complicated road conditions, we explored more 
   * Comparison of different backbones driving on Circular Path map. [video](https://www.youtube.com/watch?v=QknvHtCnNVk)
   * Comparison of different backbones driving on San Francisco map. [video](https://www.youtube.com/watch?v=MhFzb6Eb2CQ)
 
-<img src = "images/drive.gif"  alt="alt text" width=700" height="400">
+![Drive Animation](/images/drive.gif)
+                                                                     
 
  
 ### Conclusion 
