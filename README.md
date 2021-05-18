@@ -90,11 +90,14 @@ To make networks adjusted to more complicated road conditions, we explored more 
 <img src = "images/result.png">
 
 * **Demonstrations** (simulation on SVL simulator)
+  * drive with convnet baseline (see the gif below) 
   * drive in different weather condition with convnet backbone. [video](https://www.youtube.com/watch?v=cOHSH2WEXE8)
   * Comparison of different backbones driving on Circular Path map. [video](https://www.youtube.com/watch?v=QknvHtCnNVk)
   * Comparison of different backbones driving on San Francisco map. [video](https://www.youtube.com/watch?v=MhFzb6Eb2CQ)
 
+<p align="center">
 ![Drive Animation](/images/drive.gif)
+</p>
                                                                      
 
  
